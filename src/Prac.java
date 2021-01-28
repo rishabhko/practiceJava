@@ -3,31 +3,40 @@ import javafx.util.Pair;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingDeque;
 
 
-public class Prac {
+public class Prac implements Comparable<Integer> {
+
+//    @
+//    String name:
     public static void main(String[] args) {
 
-     List<Integer> list=new LinkedList<>();
-     list.add(1);
-     list.add(2);
-     list.add(3);
-     list.add(1,10);
-     Iterator<Integer> it=list.iterator();
-     Object[] ob= new Object[5];
-     ob[0]=1;
-     ob[1]="rishabh";
-        for (Object o:ob
-             ) {
-            System.out.println(o);
-
-        }
+        Queue<Integer> queue= new PriorityQueue<>();
+        BlockingDeque<Integer> integers= new LinkedBlockingDeque<>();
+        Class<?> clazz=queue.getClass();
+        System.out.println(clazz.isAnnotation());
+        ExecutorService service= Executors.
+                newFixedThreadPool(10);
+        service.submit()
 
 
 
 
 
-    }}
+
+
+
+    }
+
+    @Override
+    public int compareTo(Integer o) {
+        return 0;
+    }
+}
 
   class Car {
     void run()
